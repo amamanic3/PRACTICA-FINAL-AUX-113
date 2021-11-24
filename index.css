@@ -1,0 +1,143 @@
+@font-face {
+    src: url("font/OriginTech\ personal\ use.ttf");
+    font-family: alex;
+}
+
+body {
+    user-select: none;
+    background-color: rgb(236, 236, 236);
+}
+
+.title {
+    overflow: hidden;
+    font-family: alex;
+    font-size: 4em;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px 0 5px;
+    background-image: url("img/title.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    animation-timing-function: ease;
+
+    animation-name: titulo;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes titulo{
+    /*
+    to{
+        text-shadow: 0px 0px blue;
+    }
+    from{
+        text-shadow: 0px 50px 2px red;
+    }
+    */
+    0%{
+        text-shadow: 0px 0px 3px white;
+    }
+    20%{
+        text-shadow: 10px 10px 3px rgb(0, 215, 253);
+    }
+    40%{
+        text-shadow: -10px -10px 3px rgb(202, 45, 45);
+    }
+    60%{
+        text-shadow: 0px 0px 3px white;
+    }
+    100%{
+        text-shadow: 0px 0px 0px red;
+    }
+}
+
+.opciones{
+    background-color: #520000;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.parent .title {
+    grid-column: 1/-1;
+}
+.parent .footer {
+    grid-column: 1/-1;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 5px 0 20PX;
+}
+
+.child {
+    height: 12.5%;
+    padding-top: 10%;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    border: 2px solid rgb(148, 142, 142);
+    text-align: center;
+}
+
+.child:hover{
+    background-color: black;
+    transition: 0.3s;
+    text-shadow: 4px 4px black;
+}
+
+#fuego {
+    margin: -100% auto;
+    padding: -100%;
+    position: center;
+    transform: scale(0);
+    mask-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pizarra {
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 400px;
+    background-color: rgb(59, 2, 2);
+    background-image: url("img/dragon.png");
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    
+    
+    /* para centrear 
+    display: grid;
+    align-items: center;
+    */
+}
+
+
+#ejercicio {
+    margin-top: 5%;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.39);
+    padding: 30px 0;
+}
+
+#salida{
+    width: 60%;
+    min-height: 300px;
+    margin-top: 15px;
+    padding: 10px;
+    user-select: text;
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    border: 2px solid white;
+}
+
+
+#calcular ,#borrar ,#entrada{
+    width:80px;
+}

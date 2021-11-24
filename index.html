@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>AUX-113</title>
+    <script src="https://kit.fontawesome.com/bb168fa687.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Praise&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-lg parent">
+
+      <div class="title" onclick="op0()"><p>AUX-113 PRACTICA FINAL</p></div>
+      
+      <div class="opciones">
+        <div class="child" onclick="op1()">PROBLEMA 1</div>
+        <div class="child" onclick="op2()">PROBLEMA 2</div>
+        <div class="child" onclick="op3()">PROBLEMA 3</div>
+        <div class="child" onclick="op4()">PROBLEMA 4</div>
+        <div class="child" onclick="op5()">PROBLEMA 5</div>
+        <div class="child" onclick="op6()">PROBLEMA 6</div>
+        <div class="child" onclick="op7()">PROBLEMA 7</div>
+        <div class="child" onclick="op8()">PROBLEMA 8</div>
+        <!-- <div class="child" onclick="ocultar(9)">PROBLEMA 9</div>
+        <div class="child" onclick="ocultar(10)">PROBLEMA 10</div>
+        <div class="child" onclick="ocultar(11)">PROBLEMA 11</div>
+        <div class="child" onclick="ocultar(12)">PROBLEMA 12</div>
+        <div class="child" onclick="ocultar(13)">PROBLEMA 13</div>
+        <div class="child" onclick="ocultar(14)">PROBLEMA 14</div>
+        <div class="child" onclick="ocultar(15)">PROBLEMA 15</div>
+        <div class="child" onclick="ocultar(16)">PROBLEMA 16</div> -->
+      </div>
+
+      
+      <div class="pizarra" id="pizarra">
+        <div id="ejercicio">
+          <form name="formu">
+            <h3 id="enunciado">BEINVENIDO</h3>
+            <h5 id="ejemplo"></h5>
+            <label for="entrada" id="ingresar"></label>
+            <input type="text" name="entrada" id="entrada" min="1" value="AUX-INF">
+            <input type="button" value="113" id="calcular" class="btn btn-primary">
+          </form>
+          <textarea id="salida" disabled>-----BIENVENNID@ A LA ULTIMA PRACTICA-----</textarea>
+        </div>
+        <center><img src="img/fuego.png" id="fuego"></center>
+      </div>
+
+      <div class="footer">©copyright Alex Mamani Calle</div>
+
+
+    </div>
+
+
+
+    <script>
+      // contenedores
+      enunciado= document.getElementById("enunciado");
+      ejemplo= document.getElementById("ejemplo");
+      ingresar= document.getElementById("ingresar");
+      entrada= document.getElementById("entrada");
+      calcular= document.getElementById("calcular");
+      imprimir= document.getElementById("salida");
+      fuego= document.getElementById("fuego");
+      
+
+      function op0(){
+        enunciado.innerHTML= "BEINVENIDO";
+        ejemplo.innerHTML= "";
+        ingresar.innerHTML= "";
+        entrada.type= "text";
+        entrada.value= "AUX-INF";
+        calcular.value= "113";
+        calcular.setAttribute("onclick","");
+        imprimir.innerHTML= "-----BIENVENNID@ A LA ULTIMA PRACTICA-----"
+      };
+      
+      function op1(){
+        enunciado.innerHTML= "GENERAR LOS PRIMEROS PRIMOS PARA n.";
+        ejemplo.innerHTML= "Ejemplo: <br> Si n=5 entonces mostrar: 2,3,5,7,11";
+        ingresar.innerHTML= "ingrese n: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio1()");
+        imprimir.innerHTML= "..NO INGRESAR NUMEROS MUY GRANDES";
+      };
+      
+      function op2(){
+        enunciado.innerHTML= "Generar las siguientes serias, para ello utilizar Formualrios y Javascript";
+        ejemplo.innerHTML= "0,1,10,11,100,101,.......";
+        ingresar.innerHTML= "ingrese n: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio2()");
+        imprimir.innerHTML= "..NO INGRESAR NUMEROS MUY GRANDES";
+      };
+
+      function op3(){
+        enunciado.innerHTML= "Diseñar un algritmo para rotar a la derecha los digitos pares de un numero cualquiera que tenga una cantidad mayor o igual a 6";
+        ejemplo.innerHTML= "Ejemplo. <br> Numero: 6325423 <br> Numero Rotado 2365243";
+        ingresar.innerHTML= "ingrese n: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio3()");
+        imprimir.innerHTML= ".. ";
+      };
+
+      function op4(){
+        enunciado.innerHTML= "Dado un número entero positivo x, se desea saber si es capicua.";
+        ejemplo.innerHTML= "Ejemplo. <br> Si x = 37673 mostrar \"ES CAPICUA\"<br> Si x = 956128 mostrar \"NO ES CAPICUA\"";
+        ingresar.innerHTML= "ingrese x: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio4()");
+        imprimir.innerHTML= ".. ";
+      };
+     
+      function op5(){
+        enunciado.innerHTML= "Dado un número entero positivo x>100, mostrar los digitos repetidos";
+        ejemplo.innerHTML= "Ejemplo. <br> Numero= 123221 <br> Digitos Repetidos: 1,2";
+        ingresar.innerHTML= "ingrese x: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio5()");
+        imprimir.innerHTML= ".. ";
+      };
+
+      function op6(){
+        enunciado.innerHTML= "Verifica si un numero introducido por teclado es primo";
+        ejemplo.innerHTML= "Ejemplo. <br> Numero= 23 entonces mostrar \" ES PRIMO\" <br> Numero= 21 entonces mostrar\" NO ES PRIMO\" ";
+        ingresar.innerHTML= "ingrese x: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio6()");
+        imprimir.innerHTML= ".. ";
+      };
+
+      function op7(){
+        enunciado.innerHTML= "Vector Fibbonacci, generar la serie de fibonnacci hasta un j introducido por teclado";
+        ejemplo.innerHTML= "Ejemplo. <br> Si n= 8 entonces mostrar \" 0,1,1,2,3,5,8\" ";
+        ingresar.innerHTML= "ingrese n: ";
+        entrada.value= "";
+        entrada.type= "number";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio7()");
+        imprimir.innerHTML= ".. ";
+      };
+
+      function op8(){
+        enunciado.innerHTML= "Invertir una cadena de caracteres";
+        ejemplo.innerHTML= "Ejemplo. <br> Si x = \"ser\" entonces mostrar \"res\" ";
+        ingresar.innerHTML= "ingrese x: ";
+        entrada.value= "";
+        entrada.type= "text";
+        calcular.value= "ejecutar";
+        calcular.setAttribute("onclick","ejercicio8()");
+        imprimir.innerHTML= ".. ";
+      };
+
+      function ejercicio1(){
+        var x=entrada.value;
+        x=parseInt(x);
+        var i=0;
+        var n=2;
+        var s="";
+        while(i<x){
+          var bo= true;
+          for (var k=2; k<n; k++){
+            if (n%k==0){
+              bo= false;
+              break;
+            };
+          };
+          if (bo){
+            s+=n+",";
+            i++;
+          };
+          n+=1;
+        };
+        salida(s,"ejercicio1()");
+      };
+
+      function ejercicio2(){
+        var x= entrada.value;
+        var s="";
+
+        for (let i=0; i<x; i++){
+          let aux= 1;
+          let n=i;
+          while(n>=2){
+            aux=(aux*10)+n%2;
+            n= parseInt(n/2);
+          }
+          aux=(aux*10)+n%2;
+          
+          // reflejamos los digitos
+          n=aux;
+          aux=0;
+          while(n>0){
+            aux=(aux*10)+n%10;
+            n= parseInt(n/10);
+          }
+          aux=parseInt(aux/10); //elimino el 1 que habia agregado antes
+
+          s+=aux+",";
+        }
+        salida(s,"ejercicio2()");
+      }
+
+      function ejercicio3(){
+        let a= entrada.value;
+        var s="";
+
+        // contamos los digitos
+        let n=a;
+        let c=0;
+        while (n>0){
+          c++;
+          n= parseInt(n/10);
+        }
+
+        if (c>=6){
+          d= c-5;
+          n= a%(10**d);
+          m= parseInt(a/(10**d));
+          s= n*(10**5)+m;
+        }else{
+          s=a;
+        }
+
+        salida(s,"ejercicio3()")
+      }
+
+      function ejercicio4(){
+        var x= entrada.value;
+        var s="";
+
+        // invertir el numero
+        let n= x;
+        let aux= 0;
+        while (n>0){
+          aux= (aux*10)+ n%10;
+          n= parseInt(n/10);
+        }
+        
+        if (x==aux){
+          s="-----ES CAPICUA"
+        }else{
+          s="-----NO ES CAPICUA"
+        }
+
+        salida(s, "ejercicio4()")
+      }
+      
+      function ejercicio5(){
+        var x= entrada.value;
+        var s="";
+
+        let a= x.toString();
+        let b= a;
+
+        let n=a.length;
+
+        for (let i= 0; i<10; i++){
+          let c=0;
+          for (let k=0; k<n; k++){
+            if (i==b[k]){
+              c+=1;
+            }
+          }
+          if (c>1){
+            s+= i+"," ;
+          }
+        }
+
+        salida(s,"ejercicio5()")
+      }
+      
+      function ejercicio6(){
+        var x= entrada.value;
+        var s="";
+        x= Number(x);
+
+        s="--- ES PRIMO"
+
+        for (let i=2; i<x; i++ ){
+          if (x%i==0){
+            s="--- NO ES PRIMO";
+            break;
+          }
+        }
+        salida(s,"ejercicio6()")
+      }
+ 
+      function ejercicio7(){
+        var x= entrada.value;
+        var s="";
+
+        const v= [];
+        let a=-1; let b= 1; let fibo= 0;
+        
+        for (let i=0; i<x; i++){
+          v[i]= fibo;
+          a=b;
+          b=fibo;
+          fibo= a+b;
+        }
+
+        for (let i=0; i<x; i++){
+          s+= v[i]+",";
+        }
+
+        salida(s,"ejercicio7()")
+      }
+ 
+      function ejercicio8(){
+        var x= entrada.value;
+        var s="";
+
+        let w= x.toString();
+        
+        let n= w.length;
+        alert(w+"   "+n);
+        for (let i=n-1; i>=0; i--){
+          s+=w[i];
+        }
+        salida(s,"ejercicio8()")
+      }
+
+      function salida(x,nombre){
+        fuego.setAttribute("style","transform: scale(6);visibility: hidden;positioin:absoulute; transition: 1s;");
+        document.getElementById("calcular").setAttribute("onclick","borrar(\""+nombre+"\")");
+        calcular.value= "borrar";
+        imprimir.innerHTML= x;
+      };
+      
+      function borrar(nombre){
+        fuego.setAttribute("style","");
+        calcular.setAttribute("onclick",nombre);
+        calcular.value= "ejecutar";
+        imprimir.innerHTML= "";
+      };
+
+    </script>
+      
+      
+  </body>
+</html>
